@@ -75,6 +75,7 @@
 
     <div class="card">
         <div class="row">
+            @if ($subcategory->videos)
             @foreach($subcategory->videos as $video)
                 <div class="col-sm-6 col-md-6 col-lg-3">
                     <div class="card">
@@ -89,8 +90,8 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
-
+             @endforeach
+            @endif
         </div>
 
     </div>
