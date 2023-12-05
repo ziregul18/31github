@@ -33,6 +33,7 @@ Route::group(['prefix' => 'admin', 'middleware' =>'admin'], function () {
     Route::get('/profile', [ProfileController::class, 'show'])->name('admin.profile.show');
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('admin.profile.edit');
 
+
     Route::group(['prefix' => 'category'], function () {
         Route::get('/', [CategoryController::class, 'index'])->name('admin.category.index');
         Route::get('/create', [CategoryController::class, 'create'])->name('admin.category.create');
@@ -43,6 +44,8 @@ Route::group(['prefix' => 'admin', 'middleware' =>'admin'], function () {
         Route::patch('/{category}', [CategoryController::class, 'update'])->name('admin.category.update');
 
         Route::get('/{category}', [CategoryController::class, 'show'])->name('admin.category.show') ;
+        Route::post('/store/video/{category}', [SubcategoryController::class, 'storeVideo'])->name('admin.category.store.video');
+
     });
 
 
@@ -54,6 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' =>'admin'], function () {
 
         Route::get('/{subcategory}/edit', [SubcategoryController::class, 'edit'])->name('admin.subcategory.edit');
         Route::patch('/{subcategory}', [SubcategoryController::class, 'update'])->name('admin.subcategory.update');
+
 
 
         Route::get('/{subcategory}', [SubcategoryController::class, 'show'])->name('admin.subcategory.show') ;

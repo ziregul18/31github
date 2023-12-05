@@ -7,6 +7,8 @@ use App\Http\Requests\Admin\Category\StoreRequest;
 use App\Http\Requests\Admin\Category\UpdateRequest;
 use App\Http\Services\Admin\CategoryService;
 use App\Models\Category;
+use App\Models\Subcategory;
+use App\Models\Video;
 
 class CategoryController extends Controller
 {
@@ -24,7 +26,8 @@ class CategoryController extends Controller
     }
 
     public function show(Category $category){
-        return view('admin.category.show', compact('category'));
+        $videos = Video::all();
+        return view('admin.category.show', compact('category','videos'));
     }
 
     public function create(){
