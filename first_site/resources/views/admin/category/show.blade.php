@@ -73,27 +73,4 @@
         </div>
     </div>
 
-    <div class="card">
-        <div class="row">
-            @if ($category->videos)
-                @foreach($category->videos as $video)
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card">
-                            <video class="card-img-top" controls>
-                                <source src="{{asset($video->video_path_ky)}}">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="card-body">
-                                <h4 class="card-title">{{$video->title_ky}}</h4>
-                                <p class="card-text">{{$video->description_ky}} </p>
-                                <a href="#" class="btn btn-primary">Button</a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            @endif
-        </div>
 
-    </div>
-
-@endsection
