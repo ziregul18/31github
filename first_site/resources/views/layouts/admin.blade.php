@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Datum | CRM Admin Dashboard Template</title>
-
-    <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('admin_files/assets/images/favicon.ico')}}"/>
 
     <link rel="stylesheet" href="{{asset('admin_files/assets/css/backend-plugin.min.css')}}">
@@ -26,7 +24,6 @@
         display: inline-block; /* Размещаем иконки в одном ряду */
 
     }
-
 </style>
 <!-- loader Start -->
 <div id="loading">

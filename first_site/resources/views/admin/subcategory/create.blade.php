@@ -19,9 +19,7 @@
                 </div>
                 <div class="card-body">
                     <div class="collapse" id="form-validation-1">
-
                     </div>
-
                     <form action="{{ route('admin.subcategory.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-row">
@@ -35,7 +33,6 @@
                             </div>
                         </div>
                         <div class="form-row">
-
                             <div class="col-md-6 mb-3">
                                 <label for="description_ky">Description_ky</label>
                                 <textarea id="description_ky" name="description_ky"></textarea>

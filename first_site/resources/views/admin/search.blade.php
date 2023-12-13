@@ -2,7 +2,6 @@
 @section('content')
     <div class="container">
         <h1>Subcategories</h1>
-
         <form action="{{ route('subcategory.search') }}" method="GET">
             <div class="input-group mb-3">
                 <input type="text" name="query" class="form-control" placeholder="Search...">
@@ -11,7 +10,6 @@
                 </div>
             </div>
         </form>
-
         @if($subcategories->isEmpty())
             <p>No posts found.</p>
         @else
@@ -29,9 +27,7 @@
                     </div>
                 @endforeach
             </div>
-
-            {{ $subcategories->links() }}  {{--  Assuming you want to paginate the results--}}
+            {{ $subcategories->links() }}
         @endif
     </div>
-
 @endsection
