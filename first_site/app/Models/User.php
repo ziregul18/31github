@@ -19,10 +19,8 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array<int, string>
      */
-
     const ADMIN = 0;
     const USER = 1;
-
     public static function getRoles()
     {
         return [
@@ -30,7 +28,6 @@ class User extends Authenticatable implements MustVerifyEmail
             self::USER => 'USER',
         ];
     }
-
     public static function getRoleAsString($role)
     {
         $roles = [
@@ -45,7 +42,6 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         Mail::to($this->email)->send(new VerificationEmail($this));
     }
-
     protected $fillable = [
         'name',
         'email',

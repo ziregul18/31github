@@ -10,13 +10,10 @@
     <link rel="stylesheet" href="{{asset('admin_files/assets/css/backend.css?v=1.0.0')}}">
 </head>
 <body class="  ">
-
 <style>
-
     .icon-container {
         white-space: nowrap; /* Запрещаем перенос элементов на новую строку */
     }
-
     .small-icon {
         width: 20px; /* Устанавливаем желаемую ширину для маленьких иконок */
         height: 20px; /* Устанавливаем желаемую высоту для маленьких иконок */
