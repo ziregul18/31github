@@ -13,12 +13,6 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     const ADMIN = 0;
     const USER = 1;
     public static function getRoles()
@@ -36,8 +30,6 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
         return $roles[$role] ?? 'Unknown Role';
     }
-
-
     public function sendEmailVerificationNotification()
     {
         Mail::to($this->email)->send(new VerificationEmail($this));
@@ -48,12 +40,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'role',
     ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
