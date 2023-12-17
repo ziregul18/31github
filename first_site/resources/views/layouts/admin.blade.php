@@ -27,14 +27,11 @@
     <div id="loading-center">
     </div>
 </div>
-<!-- loader END -->
-<!-- Wrapper Start -->
 <div class="wrapper">
     @include('includes.sidebar')
     @include('includes.navbar')
     <div class="content-page">
         <div class="container-fluid">
-
             @if(session('notification'))
                 <div class="toast fade show bg-success text-white border-0 rounded p-2 mt-3" role="alert"
                      aria-live="assertive" aria-atomic="true" id="notification_id">

@@ -131,13 +131,6 @@
                                                     <option>Louisiana</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-sm-12">
-                                                <label>Address:</label>
-                                                <textarea class="form-control" name="address" rows="5" style="line-height: 22px;">37 Cardinal Lane
-Petersburg, VA 23803
-United States of America
-Zip Code: 85001</textarea>
-                                            </div>
                                         </div>
                                         <button type="reset" class="btn btn-outline-primary mr-2">Cancel</button>
                                         <button type="submit" class="btn btn-primary">Submit</button>
