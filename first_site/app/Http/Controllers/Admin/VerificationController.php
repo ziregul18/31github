@@ -27,24 +27,11 @@ class VerificationController extends Controller
     public function sendVerificationEmail()
     {
         $user = Auth::user();
-
         if ($user->hasVerifiedEmail()) {
             return response(['message' => 'Email already verified.'], 422);
         }
         Mail::to($user->email)->send(new VerificationEmail($user));
-
         return back()->with('message', 'Verification email sent!');
     }
-
-//    public function verifyEmail($token)
-//    {
-//        $user = User::where('verification_token', $token)->first();
-//        if (!$user) {
-//            return response(['message' => 'Invalid token.'], 422);
-//        }
-//        $user->markEmailAsVerified();
-//        return response(['message' => 'Email successfully verified.']);
-//    }
-
 
 }
