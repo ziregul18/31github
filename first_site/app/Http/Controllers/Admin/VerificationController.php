@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use App\Mail\VerificationEmail;
-use App\Models\User;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -12,7 +9,6 @@ use Illuminate\Support\Facades\Mail;
 class VerificationController extends Controller
 {
     use VerifiesEmails;
-
     protected $redirectTo = '/home';
 
     public function __construct()
