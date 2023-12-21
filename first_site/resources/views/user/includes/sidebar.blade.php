@@ -225,30 +225,6 @@
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a
-                            href="#"
-                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-600"
-                            role="menuitem"
-                    >
-                        <div class="inline-flex items-center">
-                            <svg
-                                    aria-hidden="true"
-                                    class="h-3.5 w-3.5 rounded-full mr-2"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    id="flag-icon-css-it"
-                                    viewBox="0 0 512 512"
-                            >
-                                <g fill-rule="evenodd" stroke-width="1pt">
-                                    <path fill="#fff" d="M0 0h512v512H0z" />
-                                    <path fill="#009246" d="M0 0h170.7v512H0z" />
-                                    <path fill="#ce2b37" d="M341.3 0H512v512H341.3z" />
-                                </g>
-                            </svg>
-                            Кыргызча
-                        </div>
-                    </a>
-                </li>
             </ul>
         </div>
     </div>

@@ -73,10 +73,6 @@ Route::group(
             });
         });
     });
-
-
-
-
 Route::get('/greeting/{locale}', function (string $locale) {
     if (! in_array($locale, ['en', 'ky', 'tr'])) {
         abort(400);
