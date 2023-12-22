@@ -1,7 +1,10 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
+
 use App\Http\Controllers\Controller;
 use App\Http\Services\UploadService;
+use App\Models\Category;
 use App\Models\Subcategory;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -13,6 +16,7 @@ class VideoController extends Controller
     {
         $this->uploadService = $uploadService;
     }
+
     public function index()
     {
         $videos = Video::all();
@@ -20,7 +24,7 @@ class VideoController extends Controller
 
     }
 
-    public function storeVideo(Request $request , Subcategory $subcategory)
+    public function storeVideo(Request $request , Subcategory $subcategory , Category $category)
     {
 
         $data = $request->validate([

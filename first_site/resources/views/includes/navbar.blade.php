@@ -1,110 +1,73 @@
-<nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
-    <div class="flex flex-wrap justify-between items-center">
-        <div class="flex justify-start items-center">
-            <button
-                data-drawer-target="drawer-navigation"
-                data-drawer-toggle="drawer-navigation"
-                aria-controls="drawer-navigation"
-                class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-            >
-                <svg
-                    aria-hidden="true"
-                    class="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"
-                    ></path>
+<div class="iq-top-navbar">
+    <div class="iq-navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="side-menu-bt-sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary wrapper-menu" width="30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <svg
-                    aria-hidden="true"
-                    class="hidden w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                    ></path>
-                </svg>
-                <span class="sr-only">Toggle sidebar</span>
-            </button>
-
-            <form action="#" method="GET" class="hidden md:block md:pl-2">
-                <label for="topbar-search" class="sr-only">Search</label>
-                <div class="relative md:w-64 md:w-96">
-                    <div
-                        class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
-                    >
-                        <svg
-                            class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                            ></path>
-                        </svg>
-                    </div>
-                    <input
-                        type="text"
-                        name="email"
-                        id="topbar-search"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                        placeholder="{{__('main.search')}}"
-                    />
-                </div>
-            </form>
-            <form action="#" method="GET" class="md:hidden mb-2">
-                <label for="sidebar-search" class="sr-only">Search</label>
-                <div class="relative">
-                    <div
-                        class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
-                    >
-                        <svg
-                            class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                            ></path>
-                        </svg>
-                    </div>
-                    <input
-                        type="text"
-                        name="search"
-                        id="sidebar-search"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                        placeholder="Search"
-                    />
-                </div>
-            </form>
-            <div class="hidden md:block md:pl-2 ml-8">
-                <ul class="flex flex-col md:flex-row md:space-x-8">
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">{{__('main.home')}}</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{ __('main.about') }}</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{ __('main.contact') }}</a>
-                    </li>
-                </ul>
             </div>
-        </div>
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-secondary" width="30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-list align-items-center">
+                        <li class="nav-item nav-icon search-content">
+                            <a href="#" class="search-toggle rounded" id="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg class="svg-icon text-secondary" id="h-suns" height="25" width="25" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </a>
+                            <div class="iq-search-bar iq-sub-dropdown dropdown-menu" aria-labelledby="dropdownSearch">
+                                <form action="#" class="searchbox p-2">
+                                    <div class="form-group mb-0 position-relative">
+                                        <input type="text" class="text search-input font-size-12" placeholder="type here to search...">
+                                        <a href="#" class="search-link">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="" width="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-icon dropdown">
+                            <a href="#" class="nav-item nav-icon dropdown-toggle pr-0 search-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                <img class="img-fluid avatar-rounded" alt="user" src={{ asset("admin_files/assets/images/user/1.jpg") }}>
+                                    <span class="mb-0 ml-2 user-name">{{  Auth::user()->name }}</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <li class="dropdown-item d-flex svg-icon">
+                                    <svg class="svg-icon mr-0 text-secondary" id="h-01-p" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <a href={{ route('admin.profile.show') }}>My Profile</a>
+                                </li>
+                                <li class="dropdown-item d-flex svg-icon">
+                                    <svg class="svg-icon mr-0 text-secondary" id="h-02-p" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                    </svg>
+                                    <a href="{{ route('admin.profile.edit', Auth::id()) }}">Edit Profile</a>
+
+                                </li>
+                                <li class="dropdown-item  d-flex svg-icon border-top">
+                                    <svg class="svg-icon mr-0 text-secondary" id="h-05-p" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                    </svg>
+                                    @auth
+                                        <form method="post" action="{{ route('auth.logout') }}" class="inline">
+                                            @csrf
+                                            <a class="button" href="{{ route('auth.login') }}">Logout</a>
+                                        </form>
+                                    @endauth
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-</nav>
+</div>

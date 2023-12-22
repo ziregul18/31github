@@ -1,58 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('user.layouts.app')
+@section('content')
+    <main class="py-4">
+        <div class="px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                @foreach ($subcategory->videos as $video)
+                    <div class="mb-4">
+                        <div class="bg-white rounded-lg overflow-hidden shadow relative">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
-</head>
+                                <video class="card-img-top" controls>
+                                    <source src="{{asset($video->video_path_ky)}}">
+                                    Your browser does not support the video tag.
+                                </video>
 
-<body>
-
-<header>
-    <h1>Your Website Title</h1>
-</header>
-
-<section>
-    <h2>Description</h2>
-    <p>This is a brief description of your website or content.</p>
-</section>
-
-<section>
-    <h2>Videos</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0"
-            allowfullscreen></iframe>
-    <!-- Add more video elements as needed -->
-</section>
-
-<section>
-    <h2>Images</h2>
-    <img src="image1.jpg" alt="Image 1 Description">
-    <!-- Add more image elements as needed -->
-</section>
-
-<section>
-    <h2>Additional Sections</h2>
-    <article>
-        <h3>Section 1</h3>
-        <p>Content for section 1 goes here.</p>
-    </article>
-
-    <article>
-        <h3>Section 2</h3>
-        <p>Content for section 2 goes here.</p>
-    </article>
-
-    <!-- Add more sections as needed -->
-
-</section>
-
-<!-- Add more sections for additional content -->
-
-<footer>
-    <p>&copy; 2023 Your Website. All rights reserved.</p>
-</footer>
-
-</body>
-
-</html>
+                            <div class="p-4 h-auto md:h-40 lg:h-20">
+                                <a href="{{route('user.display', $video->id)}}" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                    {{ $video->title_ky }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </main>
+@endsection

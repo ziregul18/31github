@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Video extends Model
 {
     use HasFactory;
-    protected $table = 'videos';
-    protected $guarded = false;
 
+    protected $table = 'videos';
+
+    protected $guarded = false;
 
 
 

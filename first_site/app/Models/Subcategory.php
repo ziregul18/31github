@@ -11,4 +11,9 @@ class Subcategory extends Model
 
     protected $table = 'subcategories';
     protected $guarded = false;
+
+    public function videos()
+    {
+        return $this->hasMany(Video::class, 'subcategory_id', 'id');
+    }
 }

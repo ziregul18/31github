@@ -18,11 +18,6 @@
                                     </a>
                                 </li>
                                 <li class="col-md-3 p-0">
-                                    <a class="nav-link" data-toggle="pill" href="#emailandsms">
-                                        Email and SMS
-                                    </a>
-                                </li>
-                                <li class="col-md-3 p-0">
                                     <a class="nav-link" data-toggle="pill" href="#manage-contact">
                                         Manage Contact
                                     </a>
@@ -43,7 +38,9 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form action="{{ route('admin.profile.update', $user->id) }}" method="post">
+                                        @csrf
+                                        @method('patch')
                                         <div class="form-group row align-items-center">
                                             <div class="col-md-12">
                                                 <div class="profile-img-edit">
@@ -61,75 +58,12 @@
                                         </div>
                                         <div class=" row align-items-center">
                                             <div class="form-group col-sm-6">
-                                                <label for="fname">First Name:</label>
-                                                <input type="text" class="form-control" id="fname" value="Barry">
+                                                <label for="name">Name:</label>
+                                                <input type="text" class="form-control" id="name" name="name"  required="" value="{{ $user->name }}">
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <label for="lname">Last Name:</label>
-                                                <input type="text" class="form-control" id="lname" value="Tech">
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label for="uname">User Name:</label>
-                                                <input type="text" class="form-control" id="uname" value="Barry@01">
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label for="cname">City:</label>
-                                                <input type="text" class="form-control" id="cname" value="Atlanta">
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label class="d-block">Gender:</label>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadio6" name="customRadio1" class="custom-control-input" checked="">
-                                                    <label class="custom-control-label" for="customRadio6"> Male </label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadio7" name="customRadio1" class="custom-control-input">
-                                                    <label class="custom-control-label" for="customRadio7"> Female </label>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label for="dob">Date Of Birth:</label>
-                                                <input  class="form-control" id="dob" value="1984-01-24">
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label>Marital Status:</label>
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option selected="">Single</option>
-                                                    <option>Married</option>
-                                                    <option>Widowed</option>
-                                                    <option>Divorced</option>
-                                                    <option>Separated </option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label>Age:</label>
-                                                <select class="form-control" id="exampleFormControlSelect2">
-                                                    <option>12-18</option>
-                                                    <option>19-32</option>
-                                                    <option selected="">33-45</option>
-                                                    <option>46-62</option>
-                                                    <option>63 > </option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label>Country:</label>
-                                                <select class="form-control" id="exampleFormControlSelect3">
-                                                    <option>Caneda</option>
-                                                    <option>Noida</option>
-                                                    <option selected="">USA</option>
-                                                    <option>India</option>
-                                                    <option>Africa</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-6">
-                                                <label>State:</label>
-                                                <select class="form-control" id="exampleFormControlSelect4">
-                                                    <option>California</option>
-                                                    <option>Florida</option>
-                                                    <option selected="">Georgia</option>
-                                                    <option>Connecticut</option>
-                                                    <option>Louisiana</option>
-                                                </select>
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control" id="email" name="email"  value="{{ $user->email }}">
                                             </div>
                                         </div>
                                         <button type="reset" class="btn btn-outline-primary mr-2">Cancel</button>
@@ -250,8 +184,10 @@
                                             <label for="url">Url:</label>
                                             <input type="text" class="form-control" id="url" value="https://getbootstrap.com">
                                         </div>
-                                        <button type="reset" class="btn btn-outline-primary mr-2">Cancel</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <div class="form-group mb-0">
+                                            <button class="btn btn-primary" type="submit">Update</button>
+                                            <a href="{{ route('admin.profile.show') }}" class="btn btn-primary">Back</a>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

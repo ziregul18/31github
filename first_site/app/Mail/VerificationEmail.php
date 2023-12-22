@@ -22,7 +22,7 @@ class VerificationEmail extends Mailable
 
     public function build()
     {
-        return $this->from('2004.01028@manas.edu.kg', 'Email verification')
+        return $this->from('burulaiurbaeva7@gmail.com', 'Email verification')
             ->subject('Email verification')
             ->view('mail.test'); // Make sure this view exists
     }

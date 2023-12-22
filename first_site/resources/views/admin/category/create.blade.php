@@ -1,5 +1,12 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 @section('content')
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script>    tinymce.init({
+            selector: 'textarea',  // Задайте селектор для элемента, в котором вы хотите использовать редактор        plugins: 'autolink lists link image charmap print preview',
+            toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        });
+    </script>
+
     <div class="row">
         <div class="col-sm-12 col-lg-12">
             <div class="card">
@@ -35,6 +42,7 @@
                             </div>
                         </div>
                         <div class="form-row">
+
                             <div class="col-md-6 mb-3">
                                 <label for="description_ky">Description_ky</label>
                                 <textarea id="description_ky" name="description_ky"></textarea>
@@ -50,7 +58,7 @@
                                 <label class="custom-file-label" for="logo">logo</label>
                             </div>
                             @error('logo')
-                                <p class="text-danger">{{$message}}</p>
+                            <p class="text-danger">{{$message}}</p>
                             @enderror
                         </div>
                         <div class="form-group mb-0">

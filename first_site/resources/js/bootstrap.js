@@ -10,6 +10,22 @@ import axios from 'axios';
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+// resources/js/app.js
+
+import 'slick-carousel/slick/slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+$(document).ready(function(){
+    $('.video-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false, // Отключает стрелки (предполагается, что будет использоваться автоматическое переключение)
+    });
+});
+
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

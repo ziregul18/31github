@@ -3970,7 +3970,7 @@ var Chartist = {
           labelAxisValueIndex = valueIndex;
         }
 
-        // We need to transform coordinates differently based on the chart layout
+        // We need to transform coordinates differently based on the chart layouts
         if(options.horizontalBars) {
           projected = {
             x: chartRect.x1 + valueAxis.projectValue(value && value.x ? value.x : 0, valueIndex, data.normalized.series[seriesIndex]),

@@ -4,6 +4,7 @@ namespace App\Http\Requests\Admin\Category;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+
 class StoreVideoRequest extends FormRequest
 {
     /**

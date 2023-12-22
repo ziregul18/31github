@@ -332,7 +332,7 @@ function checkZwjSupport (zwjEmojisToCheck, baselineEmoji, emojiToDomNode) {
   }
 }
 
-// Measure after style/layout are complete
+// Measure after style/layouts are complete
 
 const requestPostAnimationFrame = callback => {
   rAF(() => {
@@ -1895,8 +1895,8 @@ function instance($$self, $$props, $$invalidate) {
 			//
 			 $$invalidate(17, pickerStyle = `
   --font-family: ${FONT_FAMILY};
-  --num-groups: ${groups$1.length}; 
-  --indicator-opacity: ${searchMode ? 0 : 1}; 
+  --num-groups: ${groups$1.length};
+  --indicator-opacity: ${searchMode ? 0 : 1};
   --num-skintones: ${NUM_SKIN_TONES};`);
 		}
 

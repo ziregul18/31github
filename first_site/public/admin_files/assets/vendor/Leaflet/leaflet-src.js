@@ -9525,7 +9525,7 @@
   	},
 
   	// @method update: null
-  	// Updates the popup content, layout and position. Useful for updating the popup after something inside changed, e.g. image loaded.
+  	// Updates the popup content, layouts and position. Useful for updating the popup after something inside changed, e.g. image loaded.
   	update: function () {
   		if (!this._map) { return; }
 
@@ -9602,7 +9602,7 @@
   		// set overlay source to this layer
   		this._source = layer;
 
-  		// update the overlay (content, layout, ect...)
+  		// update the overlay (content, layouts, ect...)
   		this.update();
 
   		return latlng;

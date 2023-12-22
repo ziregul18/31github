@@ -1,5 +1,11 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 @section('content')
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script>    tinymce.init({
+            selector: 'textarea',  // Задайте селектор для элемента, в котором вы хотите использовать редактор        plugins: 'autolink lists link image charmap print preview',
+            toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+        });
+    </script>
     <div class="row">
         <div class="col-sm-12 col-lg-12">
             <div class="card">
@@ -44,8 +50,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="description_tr">Description_tr</label>
-                                <textarea id="description_tr"
-                                          name="description_tr"> {{ $category->description_tr }}</textarea>
+                                <textarea id="description_tr" name="description_tr">{{ strip_tags($category->description_tr) }}</textarea>
                             </div>
                         </div>
 
@@ -64,7 +69,7 @@
                         </div>
                         <div class="form-group mb-0">
                             <button class="btn btn-primary" type="submit">Update</button>
-                                <a href="{{ route('admin.category.index') }}" class="btn btn-primary">Back</a>
+                            <a href="{{ route('admin.category.index') }}" class="btn btn-primary">Back</a>
                         </div>
                     </form>
                 </div>

@@ -45,7 +45,9 @@ Route::group(
                 Route::patch('/{category}', [CategoryController::class, 'update'])->name('admin.category.update');
 
                 Route::get('/{category}', [CategoryController::class, 'show'])->name('admin.category.show');
+
                 Route::get('/{category}', [CategoryController::class, 'show'])->name('admin.category.show') ;
+
                 Route::post('/store/video/{category}', [CategoryController::class, 'storeVideo'])->name('admin.category.store.video');
             });
 
@@ -73,6 +75,10 @@ Route::group(
             });
         });
     });
+
+
+
+
 Route::get('/greeting/{locale}', function (string $locale) {
     if (! in_array($locale, ['en', 'ky', 'tr'])) {
         abort(400);

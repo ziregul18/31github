@@ -14,7 +14,7 @@ function apexChartUpdate(chart, detail) {
       }
     })
   }
-  
+
 // for am chart
 function amChartUpdate(chart, detail) {
   // let color = getComputedStyle(document.documentElement).getPropertyValue('--dark');
@@ -5002,7 +5002,7 @@ $(function() {
         alert('Selected rating: ' + value);
     }
     });
-  } 
+  }
   if (typeof $.fn.mdbRate !== typeof undefined) {
     $('#rateMe1').mdbRate();
     $('#face-rating').mdbRate();
@@ -5038,7 +5038,7 @@ if (jQuery("#editor").length) {
     var fileName = $(this).val().split("\\").pop();
     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
   });
-  
+
   //  gallary grid
 if(typeof $.fn.magnificPopup !== typeof undefined){
   $('.image-popup-vertical-fit').magnificPopup({
@@ -5066,7 +5066,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     //     percentPosition: true
     // });
     // $grid.imagesLoaded().progress(function () {
-    //     $grid.masonry('layout');
+    //     $grid.masonry('layouts');
     // });
     if(typeof $.fn.magnificPopup !== typeof undefined){
       $('.gallery').magnificPopup({
@@ -5082,7 +5082,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
 
 //layou-1
 
-  if (jQuery("#layout-1-chart-01").length) {
+  if (jQuery("#layouts-1-chart-01").length) {
   var options = {
     series: [70, 30],
     chart: {
@@ -5109,7 +5109,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       track: {
         	strokeWidth: '42%',
         },
-        
+
     }
   },
     colors: ['#05bbc9', '#876cfe'],
@@ -5118,7 +5118,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     },
   };
 
-    var chart = new ApexCharts(document.querySelector("#layout-1-chart-01"), options);
+    var chart = new ApexCharts(document.querySelector("#layouts-1-chart-01"), options);
   chart.render();
    const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
@@ -5131,7 +5131,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       apexChartUpdate(chart, e.detail)
     })
 }
-  if (jQuery("#layout-1-chart-02").length) {
+  if (jQuery("#layouts-1-chart-02").length) {
     var options = {
       series: [{
       data: [18, 22, 28, 45,34,20]
@@ -5165,7 +5165,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
         ['India'],
         ['U.S.A'],
         ['Canada'],
-        ['Africa'], 
+        ['Africa'],
       ],
       labels: {
         style: {
@@ -5176,7 +5176,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     }
   };
 
-    var chart = new ApexCharts(document.querySelector("#layout-1-chart-02"), options);
+    var chart = new ApexCharts(document.querySelector("#layouts-1-chart-02"), options);
   chart.render();
     const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
@@ -5189,7 +5189,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       apexChartUpdate(chart, e.detail)
     })
 }
-  if (jQuery("#layout-1-chart-03").length) {
+  if (jQuery("#layouts-1-chart-03").length) {
     var options = {
       series: [{
         name: ' Clicks',
@@ -5262,7 +5262,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       }
     };
 
-    var chart = new ApexCharts(document.querySelector("#layout-1-chart-03"), options);
+    var chart = new ApexCharts(document.querySelector("#layouts-1-chart-03"), options);
     chart.render();
     const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
@@ -5277,7 +5277,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
   }
 
 
-  if (jQuery('#layout-1-chart-04').length) {
+  if (jQuery('#layouts-1-chart-04').length) {
     am4core.ready(function () {
 
       // Themes begin
@@ -5295,7 +5295,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       }
 
       // Create map instance
-      var chart = am4core.create("layout-1-chart-04", am4maps.MapChart);
+      var chart = am4core.create("layouts-1-chart-04", am4maps.MapChart);
       chart.projection = new am4maps.projections.Miller();
 
       // Create map polygon series for world map
@@ -5392,7 +5392,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     });
   }
 
-  if (jQuery("#layout-1-chart-05").length) {
+  if (jQuery("#layouts-1-chart-05").length) {
     const options = {
       series: [{
         name: 'Week',
@@ -5430,7 +5430,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       }
     };
 
-    const chart = new ApexCharts(document.querySelector("#layout-1-chart-05"), options);
+    const chart = new ApexCharts(document.querySelector("#layouts-1-chart-05"), options);
     chart.render();
     const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
@@ -5444,7 +5444,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     })
   }
 
-  if (jQuery("#layout-1-chart-06").length) {
+  if (jQuery("#layouts-1-chart-06").length) {
   var options = {
           series: [{
           name: 'Total Likes',
@@ -5496,11 +5496,11 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
         }
         };
 
-    var chart = new ApexCharts(document.querySelector("#layout-1-chart-06"), options);
+    var chart = new ApexCharts(document.querySelector("#layouts-1-chart-06"), options);
         chart.render();
 }
-//layout-2
-  if (jQuery('#layout-2-chart-01').length) {
+//layouts-2
+  if (jQuery('#layouts-2-chart-01').length) {
     const options = {
       series: [{
         name: "Desktops",
@@ -5535,7 +5535,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     }
     };
 
-    const chart = new ApexCharts(document.querySelector("#layout-2-chart-01"), options);
+    const chart = new ApexCharts(document.querySelector("#layouts-2-chart-01"), options);
     chart.render();
     const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
@@ -5548,7 +5548,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       apexChartUpdate(chart, e.detail)
     })
   }
-  if (jQuery("#layout-2-chart-02").length) {
+  if (jQuery("#layouts-2-chart-02").length) {
     var options = {
       series: [{
         name: 'Top',
@@ -5608,11 +5608,11 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       },
       legend: {
         position: 'top',
-        offsetX: -20        
+        offsetX: -20
       },
     };
 
-    var chart = new ApexCharts(document.querySelector("#layout-2-chart-02"), options);
+    var chart = new ApexCharts(document.querySelector("#layouts-2-chart-02"), options);
     chart.render();
     const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
@@ -5626,8 +5626,8 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     })
 
   }
-  if (jQuery('#layout-2-chart-03').length) {
-    Highcharts.chart('layout-2-chart-03', {
+  if (jQuery('#layouts-2-chart-03').length) {
+    Highcharts.chart('layouts-2-chart-03', {
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -5685,7 +5685,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       apexChartUpdate(chart, e.detail)
     })
   }
-  if (jQuery('#layout-2-chart-04').length) {
+  if (jQuery('#layouts-2-chart-04').length) {
     am4core.ready(function () {
 
       // Themes begin
@@ -5703,7 +5703,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       }
 
       // Create map instance
-      var chart = am4core.create("layout-2-chart-04", am4maps.MapChart);
+      var chart = am4core.create("layouts-2-chart-04", am4maps.MapChart);
       chart.projection = new am4maps.projections.Miller();
 
       // Create map polygon series for world map
@@ -5799,9 +5799,9 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
 
     });
   }
-  //layout-3
+  //layouts-3
 
-  if (jQuery("#layout-3-chart-01").length) {
+  if (jQuery("#layouts-3-chart-01").length) {
     am4core.ready(function () {
 
       // Themes begin
@@ -5809,7 +5809,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       // Themes end
 
       // Create map instance
-      var chart = am4core.create("layout-3-chart-01", am4maps.MapChart);
+      var chart = am4core.create("layouts-3-chart-01", am4maps.MapChart);
       // Set map definition
       chart.geodata = am4geodata_worldLow;
 
@@ -5975,8 +5975,8 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
     });
   }
 
-  if (jQuery('#layout-3-chart-02').length) {
-    Highcharts.chart('layout-3-chart-02', {
+  if (jQuery('#layouts-3-chart-02').length) {
+    Highcharts.chart('layouts-3-chart-02', {
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
@@ -6021,7 +6021,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       }]
     });
   }
-  if (jQuery("#layout-3-chart-03").length) {
+  if (jQuery("#layouts-3-chart-03").length) {
     const options = {
       series: [{
         name: 'Frauds',
@@ -6062,7 +6062,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       },
       xaxis: {
         show: true
-        
+
       },
       yaxis: {
         show: true,
@@ -6083,9 +6083,9 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       dataLabels: {
         enabled: false
       }
-      
+
     };
-    const chart = new ApexCharts(document.querySelector("#layout-3-chart-03"), options);
+    const chart = new ApexCharts(document.querySelector("#layouts-3-chart-03"), options);
     chart.render();
     const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
@@ -6098,8 +6098,8 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       apexChartUpdate(chart, e.detail)
     })
   }
-  
-  if (jQuery("#layout-3-chart-04").length) {
+
+  if (jQuery("#layouts-3-chart-04").length) {
     var options = {
       series: [86, 40, 53, 63],
       chart: {
@@ -6130,7 +6130,7 @@ if(typeof $.fn.magnificPopup !== typeof undefined){
       labels: ['Picture view', 'Comments', 'Video plays', 'Impressions'],
     };
 
-    var chart = new ApexCharts(document.querySelector("#layout-3-chart-04"), options);
+    var chart = new ApexCharts(document.querySelector("#layouts-3-chart-04"), options);
     chart.render();
     const body = document.querySelector('body')
     if (body.classList.contains('dark')) {
