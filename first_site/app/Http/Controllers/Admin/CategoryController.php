@@ -18,7 +18,6 @@ class CategoryController extends Controller
     {
         $this->categoryService = $categoryService;
     }
-
     public function index()
     {
         $categories = Category::all();
@@ -41,8 +40,6 @@ class CategoryController extends Controller
         $category->delete();
         return redirect()->route('admin.category.index')->with(['notification' => 'Category deleted successfully.']);
     }
-
-
     public function edit(Category $category){
         return view('admin.category.edit', compact('category'));
     }

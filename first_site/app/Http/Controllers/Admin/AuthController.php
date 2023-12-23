@@ -15,8 +15,6 @@ class AuthController extends Controller
     {
         return view('auth.registration');
     }
-
-
     public function register(Request $request)
     {
         $request->validate([
@@ -36,8 +34,6 @@ class AuthController extends Controller
         Auth::login($user);
         return redirect()->route('admin.index');
     }
-
-
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -46,8 +42,6 @@ class AuthController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
-
-
     public function loginForm()
     {
         return view('auth.login');
@@ -69,8 +63,6 @@ class AuthController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
-
-
     public function logout()
     {
         Auth::logout();
