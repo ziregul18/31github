@@ -38,7 +38,6 @@ class VideoController extends Controller
 
         Video::create($data);
         return redirect()->route('admin.subcategory.index');
-
     }
 
 }
