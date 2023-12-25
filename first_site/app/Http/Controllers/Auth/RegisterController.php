@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Validator;
 class RegisterController extends Controller
 {
     use RegistersUsers;
-
     protected $redirectTo = RouteServiceProvider::HOME;
     public function __construct()
     {
