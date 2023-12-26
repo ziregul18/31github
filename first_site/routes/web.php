@@ -67,7 +67,6 @@ Route::group(
 
             });
 
-
             Route::group(['prefix' => 'video'], function () {
                 Route::get('/', [VideoController::class, 'index'])->name('admin.video.index');
                 Route::post('/', [VideoController::class, 'storeVideo'])->name('admin.video.store') ;
@@ -75,8 +74,6 @@ Route::group(
             });
         });
     });
-
-
 
 
 Route::get('/greeting/{locale}', function (string $locale) {

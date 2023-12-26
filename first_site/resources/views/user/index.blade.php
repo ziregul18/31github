@@ -1,7 +1,5 @@
-
 @extends('user.layouts.app')
 @section('content')
-
     <main class="py-4">
         <div class="px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
