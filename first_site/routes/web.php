@@ -10,7 +10,6 @@ use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Services\Localization\LocalizationService;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
-// в файле routes/web.php
 
 Route::group(
     [
@@ -51,7 +50,6 @@ Route::group(
                 Route::post('/store/video/{category}', [CategoryController::class, 'storeVideo'])->name('admin.category.store.video');
             });
 
-
             Route::group(['prefix' => 'subcategory'], function () {
                 Route::get('/', [SubcategoryController::class, 'index'])->name('admin.subcategory.index');
                 Route::get('/create', [SubcategoryController::class, 'create'])->name('admin.subcategory.create');
@@ -74,7 +72,6 @@ Route::group(
             });
         });
     });
-
 
 Route::get('/greeting/{locale}', function (string $locale) {
     if (! in_array($locale, ['en', 'ky', 'tr'])) {

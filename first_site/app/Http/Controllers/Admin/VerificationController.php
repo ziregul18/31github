@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Mail\VerificationEmail;
-use App\Models\User;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -24,7 +23,6 @@ class VerificationController extends Controller
 //        $this->redirectTo = route('verification.notice');
         $this->redirectTo = route('admin.index');
     }
-
 
     public function sendVerificationEmail()
     {

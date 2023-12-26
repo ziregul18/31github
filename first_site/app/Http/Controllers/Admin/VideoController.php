@@ -26,7 +26,6 @@ class VideoController extends Controller
 
     public function storeVideo(Request $request , Subcategory $subcategory , Category $category)
     {
-
         $data = $request->validate([
             "title_ky" => "required",
             "video_ky" => "required",
