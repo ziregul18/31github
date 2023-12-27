@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Subcategory;
 use App\Models\Video;
-
 class HomeController extends Controller
 {
     public function index()
@@ -15,7 +14,6 @@ class HomeController extends Controller
         $categories = Category::all();
         return view('user.index', compact('subcategories', 'categories'));
     }
-
     public function show(Subcategory $subcategory)
     {
         $subcategories = Subcategory::all();
