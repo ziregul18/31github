@@ -39,13 +39,10 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
         return $roles[$role] ?? 'Unknown Role';
     }
-
-
     public function sendEmailVerificationNotification()
     {
         Mail::to($this->email)->send(new VerificationEmail($this));
     }
-
     protected $fillable = [
         'name',
         'email',

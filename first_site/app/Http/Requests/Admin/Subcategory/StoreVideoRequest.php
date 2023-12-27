@@ -30,7 +30,6 @@ class StoreVideoRequest extends FormRequest
             'description_tr' => 'nullable',
         ];
     }
-
     public function messages()
     {
         return [
