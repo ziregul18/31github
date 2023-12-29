@@ -66,6 +66,4 @@ class SubcategoryController extends Controller
         $result = $this->subcategoryService->storeVideo($data, $subcategory->id);
         return redirect()->back()->with(['notification' => $result['notification']]);
     }
-
-
 }
