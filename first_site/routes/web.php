@@ -16,6 +16,7 @@ Route::group(
         'prefix' => LocalizationService::locale(),
         'middleware' => 'setLocale'
     ],
+
     function (){
         Route::get('/register', [AuthController::class, 'registrationForm'])->name('auth.registration');
         Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
@@ -23,7 +24,6 @@ Route::group(
         Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
         Route::post('/login',  [AuthController::class, 'login'])->name('auth.login');
         Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
-
 
         Route::group(['prefix' => 'admin', 'middleware' =>'admin'], function () {
             Route::get('/', [SearchController::class, 'search'])->name('admin.index');

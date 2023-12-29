@@ -24,7 +24,7 @@ class VerificationEmail extends Mailable
     {
         return $this->from('burulaiurbaeva7@gmail.com', 'Email verification')
             ->subject('Email verification')
-            ->view('mail.test'); // Make sure this view exists
+            ->view('mail.test');
     }
 
 }

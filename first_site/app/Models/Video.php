@@ -11,8 +11,5 @@ class Video extends Model
 
     protected $table = 'videos';
     protected $guarded = false;
-
-
-
 }
 
