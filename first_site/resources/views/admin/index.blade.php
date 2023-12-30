@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-
     <h1>Subcategories</h1>
-
     <form action="{{ route('admin.index') }}" method="GET">
         <div class="input-group mb-3">
             <input type="text" name="query" class="form-control" placeholder="Search...">
@@ -14,7 +12,6 @@
     @if($subcategories->isEmpty())
         <p>No posts found.</p>
     @else
-
         <div class="container-fluid">
             <div class="row">
                 @foreach ($subcategories as $subcategory)

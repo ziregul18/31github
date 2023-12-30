@@ -27,7 +27,7 @@
                     </div>
                 @endforeach
             </div>
-            {{ $subcategories->links() }}  {{--  Assuming you want to paginate the results--}}
+            {{ $subcategories->links() }}
         @endif
     </div>
 @endsection
