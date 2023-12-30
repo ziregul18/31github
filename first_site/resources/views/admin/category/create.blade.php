@@ -6,7 +6,6 @@
             toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
         });
     </script>
-
     <div class="row">
         <div class="col-sm-12 col-lg-12">
             <div class="card">

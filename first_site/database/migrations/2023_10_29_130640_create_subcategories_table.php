@@ -21,7 +21,6 @@ return new class extends Migration
             $table->longText('description_tr')->nullable();
             $table->timestamps();
 
-
             $table->index('category_id', 'subcategory_category_idx');
             $table->foreign('category_id', 'subcategory_category_fk')
                 ->on('categories')
@@ -29,10 +28,6 @@ return new class extends Migration
                 ->cascadeOnDelete();
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('subcategories');
