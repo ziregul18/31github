@@ -7,7 +7,6 @@
                     <div class="header-title">
                         <h4 class="card-title">Categories</h4>
                     </div>
-
                     <div class="header-action">
                         <a href="{{ route('admin.category.create') }}" class="btn btn-primary">Add</a>
                         <i data-toggle="collapse" data-target="#datatable-1" aria-expanded="false">

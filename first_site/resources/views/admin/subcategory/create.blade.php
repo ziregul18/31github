@@ -25,9 +25,7 @@
                 </div>
                 <div class="card-body">
                     <div class="collapse" id="form-validation-1">
-
                     </div>
-
                     <form action="{{ route('admin.subcategory.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-row">
