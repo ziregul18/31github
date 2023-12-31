@@ -39,7 +39,6 @@
                             </div>
                         </div>
                         <div class="form-row">
-
                             <div class="col-md-6 mb-3">
                                 <label for="description_ky">Description_ky</label>
                                 <textarea id="description_ky" name="description_ky"></textarea>

@@ -29,8 +29,6 @@ return new class extends Migration
                 ->on('videos')
                 ->references('id')
                 ->cascadeOnDelete();
-
-
         });
     }
 
