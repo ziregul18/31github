@@ -63,7 +63,6 @@
         </div>
     </div>
 </div>
-<!-- Wrapper End-->
 <footer class="iq-footer">
     <div class="container-fluid">
         <div class="row">
@@ -82,14 +81,13 @@
             </div>
         </div>
     </div>
-</footer>    <!-- Backend Bundle JavaScript -->
+</footer>
 <script src="{{asset('admin_files/assets/js/backend-bundle.min.js')}}"></script>
-<!-- Chart Custom JavaScript -->
+
 <script src="{{asset('admin_files/assets/js/customizer.js')}}"></script>
 
 <script src="{{asset('admin_files/assets/js/sidebar.js')}}"></script>
 
-<!-- Flextree Javascript-->
 <script src="{{asset('admin_files/assets/js/flex-tree.min.js')}}"></script>
 <script src="{{asset('admin_files/assets/js/tree.js')}}"></script>
 
